@@ -34,12 +34,9 @@
         <nav class="header-nav">
           <a class="header-logo logo" href="./index.html">
             <i>Simply</i> Chocolate
-            <img
-              src="./images/icons/logo.svg"
-              alt="Site logo"
-              width="24"
-              height="24"
-            />
+            <svg class="logo-icon" width="24" height="24">
+              <use href="./images/icons.svg#logo"></use>
+            </svg>
           </a>
           <ul class="menu">
             <li class="menu-item">
@@ -53,7 +50,7 @@
             </li>
           </ul>
         </nav>
-        <ul class="socials">
+        <ul class="socials socials-dark">
           <li class="socials-item">
             <a
               class="socials-link"
@@ -130,6 +127,11 @@
           <h2 class="visually-hidden">Benefits of Simply Chocolate</h2>
           <ul class="benefits-list">
             <li class="benefits-item">
+              <div class="benefits-wrapper">
+                <svg class="benefits-icon" width="32" height="32">
+                  <use href="./images/icons.svg#chocolate"></use>
+                </svg>
+              </div>
               <h3 class="benefits-caption">Unsurpassed taste</h3>
               <p class="benefits-desc">
                 Crafted with the finest quality cocoa beans and a dedication to
@@ -139,6 +141,11 @@
               </p>
             </li>
             <li class="benefits-item">
+              <div class="benefits-wrapper">
+                <svg class="benefits-icon" width="32" height="32">
+                  <use href="./images/icons.svg#coin"></use>
+                </svg>
+              </div>
               <h3 class="benefits-caption">Affordable price</h3>
               <p class="benefits-desc">
                 Indulge in high-quality chocolate without breaking the bank with
@@ -149,6 +156,11 @@
               </p>
             </li>
             <li class="benefits-item">
+              <div class="benefits-wrapper">
+                <svg class="benefits-icon" width="32" height="32">
+                  <use href="./images/icons.svg#spoon"></use>
+                </svg>
+              </div>
               <h3 class="benefits-caption">Own production</h3>
               <p class="benefits-desc">
                 We take pride in our own production process, ensuring that every
@@ -169,6 +181,9 @@
           </h2>
           <ul class="ingredients-list card-set">
             <li class="ingredients-item card-set-item">
+              <svg class="ingredients-icon" width="24" height="24">
+                <use href="./images/icons.svg#arrow"></use>
+              </svg>
               <img
                 class="ingredients-ill"
                 src="./images/ingredients/img-1.png"
@@ -179,6 +194,9 @@
               <h3 class="ingredients-subtitle">MILK CHOCOLATE</h3>
             </li>
             <li class="ingredients-item card-set-item">
+              <svg class="ingredients-icon" width="24" height="24">
+                <use href="./images/icons.svg#arrow"></use>
+              </svg>
               <img
                 class="ingredients-ill"
                 src="./images/ingredients/img-2.png"
@@ -189,6 +207,9 @@
               <h3 class="ingredients-subtitle">MILK</h3>
             </li>
             <li class="ingredients-item card-set-item">
+              <svg class="ingredients-icon" width="24" height="24">
+                <use href="./images/icons.svg#arrow"></use>
+              </svg>
               <img
                 class="ingredients-ill"
                 src="./images/ingredients/img-3.png"
@@ -199,6 +220,9 @@
               <h3 class="ingredients-subtitle">NUTS</h3>
             </li>
             <li class="ingredients-item card-set-item">
+              <svg class="ingredients-icon" width="24" height="24">
+                <use href="./images/icons.svg#arrow"></use>
+              </svg>
               <img
                 class="ingredients-ill"
                 src="./images/ingredients/img-4.png"
@@ -209,6 +233,9 @@
               <h3 class="ingredients-subtitle">SEMI - SWEET CHOCOLATE</h3>
             </li>
             <li class="ingredients-item card-set-item">
+              <svg class="ingredients-icon" width="24" height="24">
+                <use href="./images/icons.svg#arrow"></use>
+              </svg>
               <img
                 class="ingredients-ill"
                 src="./images/ingredients/img-5.png"
@@ -219,6 +246,9 @@
               <h3 class="ingredients-subtitle">CACAO</h3>
             </li>
             <li class="ingredients-item card-set-item">
+              <svg class="ingredients-icon" width="24" height="24">
+                <use href="./images/icons.svg#arrow"></use>
+              </svg>
               <img
                 class="ingredients-ill"
                 src="./images/ingredients/img-6.png"
@@ -229,6 +259,9 @@
               <h3 class="ingredients-subtitle">RASPBERRY</h3>
             </li>
             <li class="ingredients-item card-set-item">
+              <svg class="ingredients-icon" width="24" height="24">
+                <use href="./images/icons.svg#arrow"></use>
+              </svg>
               <img
                 class="ingredients-ill"
                 src="./images/ingredients/img-7.png"
@@ -401,30 +434,57 @@
           </h2>
           <ul class="bestsellers-list card-set">
             <li class="bestsellers-item card-set-item">
-              <img
-                src="./images/bestsellers/img-1.jpg"
-                alt="CHOCOLATE WITH NUTS"
-                width="368"
-                height="464"
-              />
+              <div class="bestsellers-wrapper">
+                <img
+                  class="bestsellers-ill"
+                  src="./images/bestsellers/img-1.jpg"
+                  alt="CHOCOLATE WITH NUTS"
+                  width="368"
+                  height="464"
+                />
+                <p class="overlay">
+                  Chocolate with fruit is an unbeatable combination of two of
+                  the tastiest things in the world. This dessert combines
+                  delicate and aromatic chocolate with fresh and juicy fruits,
+                  creating a true poetry of taste.
+                </p>
+              </div>
               <h3 class="bestsellers-caption">CHOCOLATE WITH NUTS</h3>
             </li>
             <li class="bestsellers-item card-set-item">
-              <img
-                src="./images/bestsellers/img-2.jpg"
-                alt="CHOCOLATE WITH FruIts"
-                width="368"
-                height="464"
-              />
+              <div class="bestsellers-wrapper">
+                <img
+                  class="bestsellers-ill"
+                  src="./images/bestsellers/img-2.jpg"
+                  alt="CHOCOLATE WITH FruIts"
+                  width="368"
+                  height="464"
+                />
+                <p class="overlay">
+                  Chocolate with fruit is an unbeatable combination of two of
+                  the tastiest things in the world. This dessert combines
+                  delicate and aromatic chocolate with fresh and juicy fruits,
+                  creating a true poetry of taste.
+                </p>
+              </div>
               <h3 class="bestsellers-caption">CHOCOLATE WITH FruIts</h3>
             </li>
             <li class="bestsellers-item card-set-item">
-              <img
-                src="./images/bestsellers/img-3.jpg"
-                alt="DARK CHOCOLATE"
-                width="368"
-                height="464"
-              />
+              <div class="bestsellers-wrapper">
+                <img
+                  class="bestsellers-ill"
+                  src="./images/bestsellers/img-3.jpg"
+                  alt="DARK CHOCOLATE"
+                  width="368"
+                  height="464"
+                />
+                <p class="overlay">
+                  Chocolate with fruit is an unbeatable combination of two of
+                  the tastiest things in the world. This dessert combines
+                  delicate and aromatic chocolate with fresh and juicy fruits,
+                  creating a true poetry of taste.
+                </p>
+              </div>
               <h3 class="bestsellers-caption">DARK CHOCOLATE</h3>
             </li>
           </ul>
@@ -500,7 +560,7 @@
 
           <div class="footer-group">
             <p class="footer-caption">Social networks</p>
-            <ul class="socials">
+            <ul class="socials socials-light">
               <li class="socials-item">
                 <a
                   class="socials-link"
@@ -575,5 +635,15 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop">
+      <div class="modal"></div>
+    </div>
+
+    <a class="scroll-to-top" href="#home">
+      <svg class="scroll-to-top-icon" width="52" height="52">
+        <use href="./images/icons.svg#arrow"></use>
+      </svg>
+    </a>
   </body>
 </html>

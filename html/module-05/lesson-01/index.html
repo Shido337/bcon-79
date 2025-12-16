@@ -58,6 +58,7 @@
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Site facebook.com"
+              style="--shift: 1"
             >
               <svg class="socials-icon" width="24" height="24">
                 <use href="./images/icons.svg#facebook"></use>
@@ -71,6 +72,7 @@
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Site instagram.com"
+              style="--shift: 2"
             >
               <svg class="socials-icon" width="24" height="24">
                 <use href="./images/icons.svg#instagram"></use>
@@ -84,6 +86,7 @@
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Site x.com"
+              style="--shift: 3"
             >
               <svg class="socials-icon" width="24" height="24">
                 <use href="./images/icons.svg#twitter"></use>
@@ -632,12 +635,86 @@
               <a class="menu-link" href="#">Chocolate is loved</a>
             </li>
           </ul>
+
+          <form class="footer-form subscribe-form" name="subscribeForm">
+            <label class="">
+              <input type="text" />
+            </label>
+            <button>Subscribe</button>
+          </form>
         </div>
       </div>
     </footer>
 
     <div class="backdrop">
-      <div class="modal"></div>
+      <div class="modal">
+        <button class="modal-btn" type="button">
+          <svg class="modal-btn-icon" width="24" height="24">
+            <use href="./images/icons.svg#x-close"></use>
+          </svg>
+        </button>
+
+        <p class="modal-caption">
+          LEAVE A REVIEW ABOUT <span class="accent-text">OUR CHOCOLATE</span>
+        </p>
+
+        <form class="modal-form" name="reviewForm">
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="username">Name</label>
+            <div class="modal-form-wraper">
+              <input type="text" name="username" id="username" />
+              <svg class="modal-form-icon" width="24" height="24">
+                <use href="./images/icons.svg#user"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="useremail">Email</label>
+            <div class="modal-form-wraper">
+              <input type="email" name="useremail" id="useremail" />
+              <svg class="modal-form-icon" width="24" height="24">
+                <use href="./images/icons.svg#email"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="userphone">Phone number</label>
+            <div class="modal-form-wraper">
+              <input type="text" name="userphone" id="userphone" />
+              <svg class="modal-form-icon" width="24" height="24">
+                <use href="./images/icons.svg#phone"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="usercomment">Comment</label>
+            <textarea
+              class="modal-form-comment"
+              name="usercomment"
+              id="usercomment"
+              placeholder="Enter text"
+            ></textarea>
+          </div>
+
+          <div class="modal-form-agreement">
+            <input type="checkbox" id="useragreement" name="useragreement" />
+            <label class="modal-form-box" for="useragreement">
+              <span class="custom-checkbox">
+                <svg class="" width="10" height="10">
+                  <use href="./images/icons.svg#check-mark"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a class="modal-form-link" href="#">Privacy Policy</a>
+            </label>
+          </div>
+
+          <button class="btn btn-accent" type="submit">Send</button>
+        </form>
+      </div>
     </div>
 
     <a class="scroll-to-top" href="#home">
@@ -645,5 +722,7 @@
         <use href="./images/icons.svg#arrow"></use>
       </svg>
     </a>
+
+    <!-- <script src="./js/script.js" type="module"></script> -->
   </body>
 </html>

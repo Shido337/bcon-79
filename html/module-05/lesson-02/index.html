@@ -545,7 +545,11 @@
               </p>
             </li>
           </ul>
-          <button class="reviews-btn btn btn-dark" type="button">
+          <button
+            class="reviews-btn btn btn-dark"
+            type="button"
+            data-modal-open
+          >
             Leave a review
           </button>
         </div>
@@ -646,9 +650,9 @@
       </div>
     </footer>
 
-    <div class="backdrop">
+    <div class="backdrop" data-modal>
       <div class="modal">
-        <button class="modal-btn" type="button">
+        <button class="modal-btn" type="button" data-modal-close>
           <svg class="modal-btn-icon" width="24" height="24">
             <use href="./images/icons.svg#x-close"></use>
           </svg>
@@ -661,28 +665,63 @@
         <form class="modal-form" name="reviewForm">
           <div class="modal-form-field">
             <label class="modal-form-label" for="username">Name</label>
-            <div class="modal-form-wraper">
-              <input type="text" name="username" id="username" />
+            <div class="modal-form-wrapper">
+              <input
+                class="modal-form-input"
+                type="text"
+                name="username"
+                id="username"
+                required
+                minlength="3"
+                pattern="[a-zA-Z]+\s[a-zA-Z]+$"
+                title="Username must be two word separeted by space"
+                placeholder=" "
+              />
               <svg class="modal-form-icon" width="24" height="24">
                 <use href="./images/icons.svg#user"></use>
               </svg>
+              <svg class="modal-form-icon icon-error" width="24" height="24">
+                <use href="./images/icons.svg#error"></use>
+              </svg>
+              <span class="text-error">
+                Username must be two word separeted by space
+              </span>
             </div>
           </div>
 
           <div class="modal-form-field">
             <label class="modal-form-label" for="useremail">Email</label>
-            <div class="modal-form-wraper">
-              <input type="email" name="useremail" id="useremail" />
+            <div class="modal-form-wrapper">
+              <input
+                class="modal-form-input"
+                type="email"
+                name="useremail"
+                id="useremail"
+                required
+                placeholder=" "
+              />
               <svg class="modal-form-icon" width="24" height="24">
                 <use href="./images/icons.svg#email"></use>
               </svg>
+              <svg class="modal-form-icon icon-error" width="24" height="24">
+                <use href="./images/icons.svg#error"></use>
+              </svg>
+              <span class="text-error">
+                Username must be two word separeted by space
+              </span>
             </div>
           </div>
 
           <div class="modal-form-field">
             <label class="modal-form-label" for="userphone">Phone number</label>
-            <div class="modal-form-wraper">
-              <input type="text" name="userphone" id="userphone" />
+            <div class="modal-form-wrapper">
+              <input
+                class="modal-form-input"
+                type="tel"
+                name="userphone"
+                id="userphone"
+                placeholder=" "
+              />
               <svg class="modal-form-icon" width="24" height="24">
                 <use href="./images/icons.svg#phone"></use>
               </svg>
@@ -691,28 +730,48 @@
 
           <div class="modal-form-field">
             <label class="modal-form-label" for="usercomment">Comment</label>
-            <textarea
-              class="modal-form-comment"
-              name="usercomment"
-              id="usercomment"
-              placeholder="Enter text"
-            ></textarea>
+            <div class="modal-form-wrapper">
+              <textarea
+                class="modal-form-comment"
+                name="usercomment"
+                id="usercomment"
+                placeholder="Enter text"
+                required
+                minlength="10"
+              ></textarea>
+              <svg class="modal-form-icon icon-error" width="24" height="24">
+                <use href="./images/icons.svg#error"></use>
+              </svg>
+              <span class="text-error">
+                Username must be two word separeted by space
+              </span>
+            </div>
           </div>
 
           <div class="modal-form-agreement">
-            <input type="checkbox" id="useragreement" name="useragreement" />
+            <input
+              class="agreement-input visually-hidden"
+              type="checkbox"
+              id="useragreement"
+              name="useragreement"
+              value="true"
+            />
             <label class="modal-form-box" for="useragreement">
               <span class="custom-checkbox">
-                <svg class="" width="10" height="10">
+                <svg class="custom-checkbox-icon" width="10" height="10">
                   <use href="./images/icons.svg#check-mark"></use>
                 </svg>
               </span>
               I accept the terms and conditions of the
-              <a class="modal-form-link" href="#">Privacy Policy</a>
+              <a class="modal-form-link" href="#" target="_blank">
+                Privacy Policy
+              </a>
             </label>
           </div>
 
-          <button class="btn btn-accent" type="submit">Send</button>
+          <button class="btn btn-accent modal-form-btn" type="submit" disabled>
+            Send
+          </button>
         </form>
       </div>
     </div>
@@ -724,5 +783,6 @@
     </a>
 
     <!-- <script src="./js/script.js" type="module"></script> -->
+    <script src="./js/form.js" type="module"></script>
   </body>
 </html>

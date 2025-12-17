@@ -641,10 +641,20 @@
           </ul>
 
           <form class="footer-form subscribe-form" name="subscribeForm">
-            <label class="">
-              <input type="text" />
+            <label class="footer-form-field">
+              <input
+                class="footer-form-input"
+                type="email"
+                placeholder="Enter your email"
+              />
+              <span class="footer-form-label">E-mail</span>
             </label>
-            <button>Subscribe</button>
+            <button class="footer-btn btn btn-accent" type="submit">
+              Subscribe
+              <svg class="btn-accent-icon" width="24" height="24">
+                <use href="./images/icons.svg#plane"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>

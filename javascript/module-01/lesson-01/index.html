@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables and types</title>
+    <style>
+      .wrapper {
+        position: relative;
+        width: fit-content;
+      }
+      #comment {
+        display: block;
+        max-width: 300px;
+        min-height: 200px;
+        max-height: 300px;
+        margin: 10px 0;
+        resize: vertical;
+        border: 1px solid black;
+        padding: 16px;
+        border-radius: 8px;
+      }
+      #counter {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        font-size: 10px;
+        color: lightslategray;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="text">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum explicabo
+      totam aperiam saepe numquam ut, facilis consequuntur nobis mollitia non
+      perferendis amet cupiditate labore optio, in error ducimus delectus
+      perspiciatis!
+    </p>
+    <form>
+      <input type="text" value="Mango" />
+      <input type="number" value="10" />
+    </form>
+
+    <button id="clicks">Clicks <span></span></button>
+
+    <div class="wrapper">
+      <textarea name="" id="comment"></textarea>
+      <span id="counter">101/200</span>
+    </div>
+
+    <!-- <script src="./js/01-vars.js" type="module" defer></script> -->
+    <!-- <script src="./js/02-errors.js" type="module"></script> -->
+    <!-- <script src="./js/03-operators.js" type="module"></script> -->
+    <!-- <script src="./js/04-strings.js" type="module"></script> -->
+    <script src="./js/05-coercion.js" type="module"></script>
+  </body>
+</html>

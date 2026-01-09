@@ -4,8 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Operators and functions</title>
+    <style>
+      :root {
+        font-family: sans-serif;
+        font-size: 20px;
+      }
+      #btn {
+        min-width: 120px;
+        min-height: 40px;
+        background-color: transparent;
+        border: 1px solid rebeccapurple;
+        color: rebeccapurple;
+        border-radius: 10px;
+        transition: 150ms;
+        cursor: pointer;
+      }
+      #btn:active {
+        transform: scale(0.96);
+      }
+    </style>
   </head>
   <body>
+    <button id="btn">Click</button>
+
+    <p>Clicks count: <span id="output">0</span></p>
+
     <!-- <script src="./js/01-coercion.js" type="module"></script> -->
     <!-- <script src="./js/02-comp.js" type="module"></script> -->
     <!-- <script src="./js/03-numbers.js" type="module"></script> -->

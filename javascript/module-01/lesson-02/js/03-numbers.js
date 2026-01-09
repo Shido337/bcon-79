@@ -7,10 +7,12 @@
  */
 
 let elementWidth = "50px";
-console.log("elementWidth: ", elementWidth);
+elementWidth = Number.parseInt(elementWidth);
+// console.log("elementWidth: ", elementWidth);
 
 let elementHeight = "200.74px";
-console.log("elementHeight: ", elementHeight);
+elementHeight = Number.parseFloat(elementHeight);
+// console.log("elementHeight: ", elementHeight);
 
 /**
  * Напиши скрипт, який виводить у консоль заокруглені вгору/вниз і т.д.
@@ -18,4 +20,14 @@ console.log("elementHeight: ", elementHeight);
  * та Math.round(). Перевір що буде в консолі при значеннях 27.3 та 27.9.
  */
 
-const value = 27.5;
+const value = 27.9;
+// console.log(Math.floor(value));
+// console.log(Math.ceil(value));
+// console.log(Math.round(value));
+
+const temps = [-1, -10, 20, 10, -18];
+
+// const minTemp = Math.min(...temps);
+// console.log("🚀 ~ minTemp:", minTemp);
+// const maxTemp = Math.max(-1, -10, 20, 10, -18);
+// console.log("🚀 ~ maxTemp:", maxTemp);

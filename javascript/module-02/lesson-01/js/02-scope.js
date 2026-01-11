@@ -1,0 +1,23 @@
+/**
+ * Блокова область видимості змінних
+ */
+
+const c = 15;
+
+if (true) {
+  const a = 5;
+  // console.log("🚀 ~ a:", a);
+  // console.log("🚀 ~ b:", b);
+  // console.log("🚀 ~ c:", c);
+}
+
+if (true) {
+  const b = 10;
+  // console.log("🚀 ~ a:", a);
+  // console.log("🚀 ~ b:", b);
+  // console.log("🚀 ~ c:", c);
+}
+
+// console.log("🚀 ~ a:", a);
+// console.log("🚀 ~ b:", b);
+// console.log("🚀 ~ c:", c);

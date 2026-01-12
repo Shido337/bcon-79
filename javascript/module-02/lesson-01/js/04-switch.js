@@ -13,7 +13,7 @@ const username = "Mango";
  * Якщо до дедлайну 3+ днів - виведи рядок "Date in the future"
  */
 
-const daysUntilDeadline = 5;
+const daysUntilDeadline = 0;
 
 if (daysUntilDeadline === 0) {
   // console.log("Today");
@@ -25,8 +25,41 @@ if (daysUntilDeadline === 0) {
   // console.log("Date in the future");
 }
 
+// switch (daysUntilDeadline) {
+//   case 0: // 0 === daysUntilDeadline
+//     console.log("Today");
+//     break;
+
+//   case 1: // 1 === daysUntilDeadline
+//     console.log("Tomorrow");
+//     break;
+
+//   case 2: // 2 === daysUntilDeadline
+//     console.log("Overmorrow");
+//     break;
+
+//   default:
+//     console.log("Date in the future");
+//     break;
+// }
+
+// const key = -1;
+
+// switch (key) {
+//   case 1: // key === value1 || key === value2
+//   case 2:
+//   case 3:
+//     console.log("Work");
+//     break;
+
+//   default:
+//     console.log("end");
+
+//     break;
+// }
+
 /**
- * Напиши скрипт выбора опції доставки товара.
+ * Напиши скрипт вибору опції доставки товара.
  * Опция зберігається в змінній option: 1 - самовивіз, 2 - курʼєр, 3 - пошта
  *
  * В змінні message записати повідомлення, залежно від опції.
@@ -36,7 +69,51 @@ if (daysUntilDeadline === 0) {
  * - 'Вам зателефонує менеджер'
  */
 
-const option = 1;
-let message = "";
+const Roles = {
+  admin: "Admin",
+  user: "User",
+  manager: "Manager",
+};
+let res = "";
 
-console.log("🚀 ~ message:", message);
+userRole.onchange = switchUserRole;
+function switchUserRole() {
+  const role = userRole.selectedOptions[0].value;
+  res = Roles[role];
+
+  if (res === undefined) {
+    console.log("Type of user is not set");
+  }
+  console.log("🚀 ~ res:", res);
+}
+
+const option = 2;
+// let message = "";
+readOption();
+
+deliveryOption.onchange = readOption;
+
+function readOption() {
+  const option = Number(deliveryOption.selectedOptions[0].value);
+  console.log("🚀 ~ readOption ~ option:", option);
+
+  switch (option) {
+    case 1:
+      message.textContent =
+        "Ви зможете отримати товар завтра о 12:00 в нашому офісі";
+      break;
+    case 2:
+      message.textContent =
+        "Доставка замовлення курʼєром завтра з 9:00 до 18:00";
+      break;
+    case 3:
+      message.textContent = "Замовлення буде відправлено сьогодні";
+      break;
+
+    default:
+      message.textContent = "Вам зателефонує менеджер";
+      break;
+  }
+}
+
+// console.log("🚀 ~ message:", message);

@@ -4,8 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Branching</title>
+    <style>
+      * {
+        font-family: sans-serif;
+      }
+      .wrapper {
+        max-width: 500px;
+        padding: 10px 20px;
+        margin: 10px 0;
+        border-radius: 10px;
+        background-color: #6c6c6c;
+        color: #fff;
+      }
+      .desc {
+        padding: 10px;
+        min-height: 200px;
+        border: 1px solid #fff;
+        border-radius: 10px;
+      }
+    </style>
   </head>
   <body>
+    <select name="deliveryOption" id="deliveryOption">
+      <option value="" selected></option>
+      <option value="1">Самовивіз</option>
+      <option value="2">Курʼєр</option>
+      <option value="3">Пошта</option>
+    </select>
+
+    <div class="wrapper">
+      <h3 class="title">Message:</h3>
+      <p class="desc" id="message"></p>
+    </div>
+
+    <h3>Roles:</h3>
+    <select name="" id="userRole">
+      <option value="user">User</option>
+      <option value="manager">Manager</option>
+      <option value="admin">Admin</option>
+      <option value="superUser">Super user</option>
+    </select>
+
     <!-- <script src="./js/01-branching.js" type="module"></script> -->
     <!-- <script src="./js/02-scope.js" type="module"></script> -->
     <!-- <script src="./js/03-tasks.js" type="module"></script> -->

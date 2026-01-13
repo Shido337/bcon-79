@@ -3,23 +3,23 @@
  *
  * - Цикл for
  * - Відлік від 0 до N
- * - Обратний відлік від N до 0
+ * - Зворотній відлік від N до 0
  * - Збільшення/зменшення лічильника на 2+
  * - Інкремент і декремент
  * - Цикли while і do...while
  */
 
-console.log("Before");
+// console.log("Before");
 
-console.log("After");
+// console.log("After");
 
 /**
  * -------------------------------
  */
 
-console.log("Before");
+// console.log("Before");
 
-console.log("After");
+// console.log("After");
 
 /**
  * -------------------------------
@@ -34,8 +34,8 @@ let a = 10;
  * -------------------------------
  */
 
-console.log("Before while loop");
+// console.log("Before while loop");
 
 let counter = 0;
 
-console.log("After while loop");
+// console.log("After while loop");

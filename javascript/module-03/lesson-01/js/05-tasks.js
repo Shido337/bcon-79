@@ -5,6 +5,17 @@
 const numbers = [1, 5, 8, 9, 12, 4, 15, 27, 30, 18, 14];
 let total = 0;
 
+for (const number of numbers) {
+  if (number % 2 !== 0) {
+    continue;
+  }
+
+  // console.log(`${number} is even`);
+  total += number;
+}
+
+// console.log(total);
+
 /**
  * Напиши скрипт, який виводить у консоль ім'я та телефонний номер користувача.
  * У змінних names та phones зберігаються рядки імен та телефонних номерів,
@@ -13,22 +24,63 @@ let total = 0;
  */
 
 const names = "Jacob,William,Solomon,Artemis";
-const phones = "89001234567,89001112233,890055566377,890055566300";
+const phones = "89001234567,89001112233,89005556637,89005556630";
+
+const namesArr = names.split(",");
+console.log("🚀 ~ namesArr:", namesArr);
+const phonesArr = phones.split(",");
+console.log("🚀 ~ phonesArr:", phonesArr);
+
+let header = `Name        |  Phone number |\n`;
+
+for (let i = 0; i < namesArr.length; i++) {
+  const name = namesArr[i];
+  const phone = phonesArr[i];
+  // console.log("🚀 ~ name:", name);
+  // console.log("🚀 ~ phone:", phone);
+  const record = `📱 - ${name.padEnd(7, " ")} : ${phone} |\n`;
+  // console.log(record);
+  header += record;
+}
+// console.log(header);
 
 /**
  * Напиши скрипт, який виводить у консоль усі слова рядка
  * крім першого і останнього. Результуючий рядок не повинен починатися
- * або закінчуватися символ пробілу.
+ * або закінчуватися символом пробілу.
  * Скрипт повинен працювати для будь-якого рядка.
  */
 
 const string = "Welcome to the future";
+
+const words = string.split(" ");
+const lastWordIndex = words.length - 1;
+const cutWords = words.slice(1, lastWordIndex);
+const updetedString = cutWords.join(" ");
+// console.log("🚀 ~ updetedString:", updetedString);
+
+let updWords = "";
+for (let i = 1; i < words.length - 1; i++) {
+  const word = words[i];
+  updWords += `${word} `;
+}
+const res = updWords.trim();
+// console.log("🚀 ~ res:", res);
 
 /**
  * Напиши скрипт пошуку найменшого числа у масиві. Код повинен працювати
  * для будь-якого масиву чисел. Використовуй цикл для розв'язання задачі.
  */
 
-const values = [2, 17, 94, 1, 23, 37];
-let min;
-console.log(min); // 1
+const values = [0, 17, 94, 1, 23, 37];
+let min = values[0];
+
+for (let i = 1; i < values.length; i++) {
+  const currEl = values[i];
+
+  if (min > currEl) {
+    min = currEl;
+  }
+}
+
+// console.log(min); // 1

@@ -70,6 +70,7 @@ function checkSpamWords(
   blacklistedWord1 = "spam",
   blacklistedWord2 = "sale"
 ) {
+  // arguments = ["#fatlivesmatter advertising campaign", "spam", "sale", "adult", "buy"]
   const hasSpamWords =
     str.toLowerCase().includes(blacklistedWord1.toLowerCase()) ||
     str.toLowerCase().includes(blacklistedWord2.toLowerCase());
@@ -85,3 +86,10 @@ function checkSpamWords(
 checkSpamWords(string1, blacklistedWord1, blacklistedWord2);
 checkSpamWords(string2, blacklistedWord1, blacklistedWord2);
 checkSpamWords(string3);
+checkSpamWords(
+  "#fatlivesmatter advertising campaign",
+  "spam",
+  "sale",
+  "adult",
+  "buy"
+);

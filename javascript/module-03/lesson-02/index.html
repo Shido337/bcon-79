@@ -4,11 +4,77 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Functions</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <section class="py-5">
+      <div class="container">
+        <label for="exampleFormControlInput1" class="form-label">
+          Введіть кількість хвилин для конвертації
+        </label>
+        <div class="input-group mb-3">
+          <input
+            class="form-control js-form-control"
+            type="number"
+            id="exampleFormControlInput1"
+            placeholder="Наприклад: 60"
+            min="0"
+            max="2000"
+          />
+          <button
+            class="btn btn-primary js-btn"
+            type="button"
+            id="button-addon2"
+          >
+            Button
+          </button>
+        </div>
+
+        <div>
+          <p class="display-3 text-center js-output">
+            Час: <strong>00:00</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="toast-container p-3 bottom-0 end-0" id="toastPlacement">
+      <div
+        class="toast align-items-center text-bg-warning text-white js-toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="d-flex">
+          <div class="toast-body">
+            Введіть кількість хвилин в діапазоні від 0 до 2000
+          </div>
+          <button
+            type="button"
+            class="btn-close me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script>
+      const superGlobalValue = 111;
+    </script> -->
     <!-- <script src="./js/01-args.js" type="module"></script> -->
     <!-- <script src="./js/02-scope.js" type="module"></script> -->
     <!-- <script src="./js/03-stack.js" type="module"></script> -->
-    <!-- <script src="./js/04-tasks.js" type="module"></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      async
+    ></script>
+    <script src="./js/04-tasks.js" type="module"></script>
   </body>
 </html>

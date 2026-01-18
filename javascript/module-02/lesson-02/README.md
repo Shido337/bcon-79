@@ -3,7 +3,6 @@
 1. Пограємо в Kahoot і обговоримо питання
 
 2. Розберемо методи рядків (01-methods.js)
-
    - Метод slice
    - Метод toLowerCase/toUpperCase
    - Метод includes
@@ -15,7 +14,6 @@
    методів рядків (02-tasks.js)
 
 4. Розглянемо цикли (03-loops.js)
-
    - Цикл while
    - Цикл do…while
    - Цикл for

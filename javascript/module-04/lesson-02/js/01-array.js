@@ -18,28 +18,67 @@ console.table(friends);
 /**
  * Пошук друга за іменем
  */
-function findFriendByName(allFriends, friendName) {}
+function findFriendByName(allFriends, friendName) {
+  // allFriends = [ {...}, {...}, {...}, {...} ] перелік друзів
+  // friendName = "Poly"
+  for (const friend of allFriends) {
+    // const friend = {...} обʼєкт номер 3
+    if (friend.name === friendName) {
+      // friend.name = "Poly" === "Chelsy"
+      console.log("Exsist");
+      return true;
+    }
+  }
 
-// console.log(findFriendByName(friends, "Poly"));
-// console.log(findFriendByName(friends, "Chelsy"));
+  console.log("Doesn't exist");
+  return false;
+}
+
+// const res1 = findFriendByName(friends, "Poly");
+// console.log("🚀 ~ res1:", res1);
+// const res2 = findFriendByName(friends, "Chelsy");
+// console.log("🚀 ~ res2:", res2);
 
 /**
  * Отримуємо імена всіх друзів
  */
-function getAllNames(allFriends) {}
+function getAllNames(allFriends) {
+  // allFriends = [ {...}, {...}, {...}, {...} ] перелік друзів
+  const friendNames = [];
 
-// console.log(getAllNames(friends));
+  for (const friend of allFriends) {
+    // const friend =  { name, online }
+    // console.log("🚀 ~ getAllNames ~ friend.name:", friend.name);
+    friendNames.push(friend.name);
+  }
+
+  return friendNames;
+}
+
+const res3 = getAllNames(friends);
+// console.log("🚀 ~ res3:", res3);
 
 /**
  * Отримуємо імена тільки тих друзів, які зараз онлайн
  */
-function getOnlineFriends(allFriends) {}
+function getOnlineFriends(allFriends) {
+  const onlineFriends = [];
 
-// console.log(getOnlineFriends(friends));
+  for (const friend of allFriends) {
+    if (friend.online) {
+      onlineFriends.push(friend.name);
+    }
+  }
+
+  return onlineFriends;
+}
+
+const res4 = getOnlineFriends(friends);
+// console.log("🚀 ~ res4:", res4);
 
 /**
  * Напишіть функцію calcTotalPrice(stones, stoneName),
- * яка приймає масив об'єктів та рядок з назвою каменю.
+ * яка приймає масив об'єктів каменів та рядок з назвою каменю.
  * Функція рахує і повертає загальну вартість каміння з
  * такою назвою, ціною та кількістю з об'єкта
  */
@@ -50,3 +89,25 @@ const stones = [
   { name: "Сапфір", price: 400, quantity: 7 },
   { name: "Щебінь", price: 200, quantity: 2 },
 ];
+
+function calcTotalPrice(allStones, searchStoneName) {
+  // allStones =[ {...}, {...}, {...}, {...} ]
+  // searchStoneName = "Сапфір"
+
+  for (const stone of allStones) {
+    // const stone = { name, price, quantity }
+    // console.log(stone);
+    if (stone.name === searchStoneName) {
+      return stone.price * stone.quantity;
+    }
+  }
+
+  return 0;
+}
+
+const totalStonePrice1 = calcTotalPrice(stones, "Сапфір"); // 2800
+// console.log("🚀 ~ totalStonePrice1:", totalStonePrice1);
+const totalStonePrice2 = calcTotalPrice(stones, "Щебінь"); // 400
+// console.log("🚀 ~ totalStonePrice2:", totalStonePrice2);
+const totalStonePrice3 = calcTotalPrice(stones, "Бурштин"); // 400
+// console.log("🚀 ~ totalStonePrice3:", totalStonePrice3);

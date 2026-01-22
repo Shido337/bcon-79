@@ -17,24 +17,43 @@ const allCars = [
   { make: "Ford", model: "Fusion", amount: 13, price: 22120 },
   { make: "Ford", model: "Explorer", amount: 6, price: 31660 },
 ];
+// console.table(allCars);
 
 /**
  * Нехай функція getModels повертає масив моделей (поле model) всіх автомобілів.
  */
 
-const getModels = (cars) => {};
+// const getModels = cars => {
+//   const models = cars.map((car, index, cars) => {
+//     // console.log(car.model);
+//     return car.model;
+//   });
 
-console.table(getModels(allCars));
+//   // console.log(models);
+//   return models;
+// };
+
+const getModels = cars => cars.map(car => car.model);
+
+// console.table(getModels(allCars));
 
 /**
- * Нехай функція makeCarsWithDiscount повертає новий масив об'єктів із змінним
+ * Нехай функція makeCarsWithDiscount повертає новий масив об'єктів із зміненим
  * значенням властивості price залежно від переданої знижки.
  */
 
-const makeCarsWithDiscount = (cars, discount) => {};
+const makeCarsWithDiscount = (cars, discount) => {
+  return cars.map((car, index, array) => {
+    return {
+      ...car,
+      price: car.price * (1 - discount),
+    };
+  });
+};
 
-console.table(makeCarsWithDiscount(allCars, 0.2));
-console.table(makeCarsWithDiscount(allCars, 0.4));
+// const res1 = makeCarsWithDiscount(allCars, 0.2);
+// console.log("🚀 ~ res1:", res1);
+// console.table(makeCarsWithDiscount(allCars, 0.4));
 
 const players = [
   { id: "player-1", name: "Mango", timePlayed: 310, points: 54, online: false },
@@ -45,12 +64,27 @@ const players = [
 ];
 console.table(players);
 
-/*
+/**
  * Збільшуємо кількість годин гравця за id
  */
 
-const playerIdToUpdate = "player-3";
+const updatePlayerTimeById = (players, playerId) => {
+  return players.map((player, index, players) => {
+    if (player.id === playerId) {
+      // player.timePlayed += 100; //! Мутація (зміна) вхідних даних
+      // return player;
+      return {
+        ...player, // spread
+        timePlayed: player.timePlayed + 100,
+      };
+    }
 
-const updatedPlayers = players.map((player) => {});
+    // return player; //! Мутація (зміна) вхідних даних
+    return { ...player }; // spread
+  });
+};
 
-console.log(updatedPlayers);
+const updatedPlayers = updatePlayerTimeById(players, "player-3");
+// console.log(updatedPlayers);
+
+// console.table(players);

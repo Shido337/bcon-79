@@ -6,13 +6,22 @@
  * - Інлайн стрілочні функції
  */
 
+//? Function declaration
 function add(a, b, c) {
   return a + b + c;
 }
 
-// const addArrow =
+const addArrow = (a, b, c) => a + b + c;
 
-console.log(add(5, 10, 15));
+const addArrow_ = (a, b, c) => {
+  const sum = a + b + c;
+
+  if (sum > 20) {
+    return sum;
+  }
+};
+
+// console.log(add(5, 10, 15));
 // console.log(addArrow(5, 10, 15));
 
 /**
@@ -24,9 +33,9 @@ function fnA() {
   };
 }
 
-console.log(fnA());
+// console.log(fnA());
 
-// const arrowFnA =
+const arrowFnA = () => ({ a: 5 });
 
 // console.log(arrowFnA());
 
@@ -39,10 +48,13 @@ function calc(a, b, callback) {
   console.log(result);
 }
 
-calc(2, 3, function (x, y) {
-  return x + y;
-});
+// calc(2, 3, function (x, y) {
+//   return x + y;
+// });
 
-calc(10, 8, function (x, y) {
-  return x - y;
-});
+calc(2, 3, (x, y) => x + y);
+
+// calc(10, 8, function (x, y) {
+//   return x - y;
+// });
+calc(10, 8, (x, y) => x - y);

@@ -8,10 +8,12 @@
  *    - якщо коллбек повернув false елемент НЕ додається в масив, що повертається
  */
 
-const numbers = [5, 10, 15, 20, 25];
+const numbers = [5, 10, 15, 20, 25, 27];
 
-const filteredNumbers = numbers;
-console.log(filteredNumbers);
+const filteredNumbers = numbers.filter(
+  number => number % 5 === 0 && number > 15
+);
+// console.log(filteredNumbers);
 
 /**
  * ---------------------------
@@ -99,12 +101,28 @@ const allCars = [
   },
 ];
 
+const example = {
+  make: "Ford",
+  model: "Explorer",
+  type: "suv",
+  amount: 6,
+  price: 31660,
+  onSale: true,
+};
+
+let updAllCars = Array(1000000);
+updAllCars = updAllCars.fill(example);
+console.log("🚀 ~ updAllCars:", updAllCars);
 /**
  * Нехай функція filterByPrice повертає масив автомобілів ціна яких менша ніж
  * значення параметра threshold.
  */
 
-const filterByPrice = (cars, threshold) => {};
+// const filterByPrice = (cars, threshold) => {
+//   return cars.filter(car => car.price < threshold);
+// };
+const filterByPrice = (cars, threshold) =>
+  cars.filter(car => car.price < threshold);
 
 // console.table(filterByPrice(allCars, 30000));
 // console.table(filterByPrice(allCars, 25000));
@@ -114,16 +132,29 @@ const filterByPrice = (cars, threshold) => {};
  * властивість onSale яких true.
  */
 
-const getCarsWithDiscount = (cars) => {};
-
+const getCarsWithDiscount = cars => {
+  return cars.filter(car => {
+    return car.onSale;
+  });
+};
 // console.table(getCarsWithDiscount(allCars));
 
+// console.time("filter");
+// updAllCars.filter(car => car.onSale);
+// console.timeEnd("filter");
+// console.time("every");
+// updAllCars.every(car => car.onSale);
+// console.timeEnd("every");
 /**
  * Нехай функція getCarsWithType повертає масив автомобілів тип яких збігається
  * зі значенням параметра type.
  */
 
-const getCarsWithType = (cars, type) => {};
+const getCarsWithType = (cars, type) => {
+  return cars.filter(car => {
+    return car.type === type;
+  });
+};
 
 // console.table(getCarsWithType(allCars, "suv"));
 // console.table(getCarsWithType(allCars, "sedan"));

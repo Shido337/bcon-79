@@ -10,29 +10,34 @@
  * - приводить елементи до рядка і сортує за [Unicode](https://unicode-table.com/en/)
  */
 
-const numbers = [1, 9, 6, 2, 3];
+const numbers = [1, 9, 6, 2, 3, 11, 12, 22, 34, "14px", "32.5"];
 
-const sorted = numbers;
-console.log("sorted ", sorted);
+const sorted = numbers.toSorted((curr, next) => curr - next);
+// console.log("sorted ", sorted);
 
 const letters = ["b", "B", "a", "A"];
-console.log("letters", letters);
+const sortedLetter = letters.toSorted((a, b) => b.localeCompare(a));
+// console.log("letters", sortedLetter);
 
 /**
  * compareFunction - функція порівняння (callback)
  * Елементи масиву сортуються відповідно до її значення, що повертається
  */
+const descSortedNumbers = numbers.toSorted((a, b) => {
+  a = Number.parseFloat(a);
+  b = Number.parseFloat(b);
 
-console.log(
-  numbers.toSorted((curEl, nextEl) => {
-    return nextEl - curEl;
-  })
-);
+  return b - a;
+});
+// console.log("descSortedNumbers", descSortedNumbers);
 
-const descSortedNumbers = numbers;
-const ascSortedNumbers = numbers;
-console.log("descSortedNumbers", descSortedNumbers);
-console.log("ascSortedNumbers", ascSortedNumbers);
+const ascSortedNumbers = numbers.toSorted((a, b) => {
+  a = Number.parseFloat(a);
+  b = Number.parseFloat(b);
+
+  return a - b;
+});
+// console.log("ascSortedNumbers", ascSortedNumbers);
 
 /**
  * Сортування масиву об'єктів
@@ -45,13 +50,28 @@ const players = [
   { id: "player-5", name: "Chelsey", timePlayed: 80, online: true },
 ];
 
-// За ігровим часом
-const sortedByBestPlayers = players;
-console.table(sortedByBestPlayers);
+console.table(players);
 
-const sortedByWorstPlayers = players;
-console.table(sortedByWorstPlayers);
+// За ігровим часом
+const sortedByBestPlayers = players.toSorted((a, b) => {
+  return b.timePlayed - a.timePlayed;
+});
+// console.table(sortedByBestPlayers);
+
+const sortedByWorstPlayers = players.toSorted((a, b) => {
+  return a.timePlayed - b.timePlayed;
+});
+// console.table(sortedByWorstPlayers);
+
+// Сортування булевих значень
+// const byOnlineStatus = players.toSorted((currPlayer, nextPlayer) => {
+//   return nextPlayer.online - currPlayer.online;
+// });
+// console.log("🚀 ~ byOnlineStatus:", byOnlineStatus);
 
 // По першій літері имені
-const byName = players;
-console.table(byName);
+const byName = players.toSorted((currPlayer, nextPlayer) => {
+  // return currPlayer.name[0].localeCompare(nextPlayer.name[0]);
+  return nextPlayer.name[0].localeCompare(currPlayer.name[0]);
+});
+// console.table(byName);

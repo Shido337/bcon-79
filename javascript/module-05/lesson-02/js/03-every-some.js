@@ -6,14 +6,23 @@ const players = [
   { id: "player-5", name: "Chelsy", timePlayed: 280, points: 48, online: true },
 ];
 
+console.table(players);
+
 /**
  * Метод every
  *
  * - Поелементно перебирає оригінальний масив
  * - Повертає true якщо всі елементи масиву задовольняють умову
  */
-const isAllOnline = players;
-// console.log('isAllOnline: ', isAllOnline);
+const isAllOnline = players.every((player, index, array) => {
+  return player.online;
+});
+console.log("isAllOnline: ", isAllOnline);
+
+const isPlayersOnlineAndPlayEnough = players.every((player, index, array) => {
+  return player.online && player.timePlayed > 200;
+});
+console.log("🚀 ~ isPlayersOnlineAndPlayEnough:", isPlayersOnlineAndPlayEnough);
 
 /**
  * Метод some
@@ -21,8 +30,12 @@ const isAllOnline = players;
  * - Поелементно перебирає оригінальний масив
  * - Повертає true якщо хоча б один елемент масиву задовольняє умову
  */
-const isAnyOnline = players;
+const isAnyOnline = players.some((player, index, array) => {
+  return player.online;
+});
 console.log("isAnyOnline: ", isAnyOnline);
 
-const anyHardcorePlayers = players;
+const anyHardcorePlayers = players.some((player, index, array) => {
+  return player.timePlayed > 400;
+});
 console.log("anyHardcorePlayers: ", anyHardcorePlayers);

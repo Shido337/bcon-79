@@ -7,13 +7,15 @@
 
 const numbers = [5, 10, 15, 20, 25];
 
-const number = numbers;
+const number = numbers.find((number, index, array) => {
+  return number < 0;
+});
 // console.log(number);
 
 /**
  * -----------------------------
  */
-const cars = [
+const allCars = [
   { make: "Honda", model: "CR-V", type: "suv", price: 24045 },
   { make: "Honda", model: "Accord", type: "sedan", price: 22455 },
   { make: "Mazda", model: "Mazda 6", type: "sedan", price: 24195 },
@@ -26,10 +28,16 @@ const cars = [
   { make: "Ford", model: "Explorer", type: "suv", price: 31660 },
 ];
 
+console.table(allCars);
+
 /**
  * Шукаємо машину за моделлю
  */
-const getCarByModel = (cars, model) => {};
+const getCarByModel = (cars, model) => {
+  return cars.find((car, index, array) => {
+    return car.model === model;
+  });
+};
 
 // console.log(getCarByModel(allCars, "F-150"));
 // console.log(getCarByModel(allCars, "CX-9"));
@@ -38,7 +46,11 @@ const getCarByModel = (cars, model) => {};
 /**
  * Шукаємо машину за типом кузова
  */
-const getCarByType = (cars, type) => {};
+const getCarByType = (cars, type) => {
+  return cars.find((car, index, array) => {
+    return car.type === type;
+  });
+};
 
 // console.log(getCarByType(allCars, "sedan"));
 // console.log(getCarByType(allCars, "truck"));
